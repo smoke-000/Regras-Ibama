@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBAMA - Catálogo de Cargos</title>
+    <style>
+        :root {
+            --bg-dark: #0f0f13;
+            --card-bg: #1a1a24;
+            --accent-orange: #ff5722;
+            --accent-yellow: #ffeb3b;
+            --accent-cyan: #00bcd4;
+            --accent-green: #4caf50;
+            --text-white: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Banner de Aviso (Terceira Imagem) */
+        .warning-banner {
+            background-color: #1a0a20;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            border-bottom: 2px solid #3d1a4a;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #1a1a24 0%, var(--bg-dark) 100%);
+        }
+
+        h1 { margin: 0; letter-spacing: 2px; color: var(--accent-green); }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            position: relative;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-title::before, .section-title::after {
+            content: "-------------------";
+            color: #333;
+            margin: 0 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid transparent;
+        }
+
+        .cargo-nome { font-weight: bold; font-size: 0.9rem; }
+        .cargo-preco { color: var(--text-white); font-weight: bold; }
+
+        /* Cores baseadas nas imagens */
+        .supervisores .section-title { color: var(--accent-yellow); }
+        .supervisores .card { border-left-color: var(--accent-orange); }
+        
+        .oficiais .section-title { color: var(--accent-cyan); }
+        .oficiais .card { border-left-color: var(--accent-cyan); }
+        
+        .pracas .section-title { color: var(--accent-green); }
+        .pracas .card { border-left-color: var(--accent-green); }
+    </style>
+</head>
+<body>
+
+    <div class="warning-banner">
+        ➤ AVISO: QUALQUER QUEBRA DE REGRAS QUE RESULTA EM REBAIXAMENTO, VAMOS TOMAR AS MEDIDAS NECESSÁRIAS QUE PODEM AFETAR O CARGO COMPRADO! 👑
+    </div>
+
+    <header>
+        <h1>IBAMA</h1>
+        <p style="color: var(--text-gray);">Catálogo de Cargos Hierárquicos</p>
+        <div class="discord-call">Para realizar uma compra, abra um ticket compras em nosso Discord!</div>
+    </header>
+
+    <div class="container">
+        
+        <div class="supervisores">
+            <div class="section-title">SUPERVISORES</div>
+            <div class="grid">
+                <div class="card"><span class="cargo-nome">TENENTE-CORONEL</span> <span class="cargo-preco">R$ 27,90</span></div>
+                <div class="card"><span class="cargo-nome">MAJOR</span> <span class="cargo-preco">R$ 25,90</span></div>
+                <div class="card"><span class="cargo-nome">CAPITÃO</span> <span class="cargo-preco">R$ 23,50</span></div>
+                <div class="card"><span class="cargo-nome">SUPERVISOR TESTE</span> <span class="cargo-preco">R$ 20,90</span></div>
+            </div>
+        </div>
+
+        <div class="oficiais">
+            <div class="section-title">OFICIAIS</div>
+            <div class="grid">
+                <div class="card"><span class="cargo-nome">1º TENENTE</span> <span class="cargo-preco">R$ 18,50</span></div>
+                <div class="card"><span class="cargo-nome">2º TENENTE</span> <span class="cargo-preco">R$ 17,90</span></div>
+                <div class="card"><span class="cargo-nome">3º TENENTE</span> <span class="cargo-preco">R$ 16,50</span></div>
+                <div class="card"><span class="cargo-nome">SUBTENENTE</span> <span class="cargo-preco">R$ 15,00</span></div>
+                <div class="card"><span class="cargo-nome">ASPIRANTE A OFICIAL</span> <span class="cargo-preco">R$ 14,20</span></div>
+                <div class="card"><span class="cargo-nome">OFICIAL</span> <span class="cargo-preco">R$ 13,00</span></div>
+            </div>
+        </div>
+
+        <div class="pracas">
+            <div class="section-title">PRAÇAS</div>
+            <div class="grid">
+                <div class="card"><span class="cargo-nome">1º SARGENTO</span> <span class="cargo-preco">R$ 12,90</span></div>
+                <div class="card"><span class="cargo-nome">2º SARGENTO</span> <span class="cargo-preco">R$ 11,50</span></div>
+                <div class="card"><span class="cargo-nome">3º SARGENTO</span> <span class="cargo-preco">R$ 10,90</span></div>
+                <div class="card"><span class="cargo-nome">CABO</span> <span class="cargo-preco">R$ 8,90</span></div>
+                <div class="card"><span class="cargo-nome">SOLDADO 1ª CLASSE</span> <span class="cargo-preco">R$ 7,90</span></div>
+                <div class="card"><span class="cargo-nome">SOLDADO 2ª CLASSE</span> <span class="cargo-preco">R$ 6,50</span></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
